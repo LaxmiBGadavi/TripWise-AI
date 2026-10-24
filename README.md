@@ -1,233 +1,79 @@
-# ✈️ TripWise AI — Smart Travel Planning & Trip Management Platform
+# 🚀 TripWise AI — Intelligent Travel Planning Platform
 
-TripWise AI is a full-stack, AI-powered travel planning platform designed to help users plan personalized trips, estimate travel expenses, organize itineraries, and manage their travel plans in one place.
+**Plan smarter. Travel better. Make every journey count.**
 
-The goal is to simplify travel planning by combining intelligent recommendations, budget management, and a user-friendly web interface.
+## 📌 Overview
 
-## 🚀 Project Overview
+TripWise AI is a proposed AI-powered travel planning platform designed to help travellers organize personalized trips based on their destination, budget, travel duration, and interests.
 
-Planning a trip often requires switching between multiple websites to research destinations, organize activities, estimate expenses, and manage travel details.
+Instead of switching between multiple tools to plan activities and manage expenses, users can create itineraries, review budget estimates, and save their travel plans in one place.
 
-TripWise AI aims to bring these tasks together in one platform. Users can enter their destination, travel duration, budget, and interests to generate a personalized sample itinerary.
+## 🎯 Problem Statement
 
-## ✨ Key Features
+Planning a trip can be time-consuming. Travellers need to research destinations, organize activities, estimate expenses, and coordinate their schedules while staying within their budgets.
 
-- **Smart Trip Planning:** Generate day-by-day itineraries based on destination, duration, budget, and interests.
-- **Budget Estimation:** Calculate a daily budget and organize estimated travel expenses.
-- **Interest-Based Recommendations:** Customize plans for sightseeing, food, beaches, adventure, nature, culture, and shopping.
-- **Trip Management:** Save and retrieve travel plans using a database.
-- **REST API Integration:** Connect the frontend and backend through structured API endpoints.
-- **AI-Ready Architecture:** Designed for integration with large language models to provide contextual travel recommendations.
-- **Responsive Interface:** Access the travel planner through a modern web interface.
+TripWise AI aims to simplify this process by bringing trip planning, budget management, and itinerary organization into a single platform.
 
-## 🛠️ Technology Stack
+## 💡 Key Features
+
+- **Personalized Itinerary Generator:** Creates day-by-day sample travel plans based on user preferences.
+- **Smart Budget Planner:** Helps travellers review their total budget and daily spending allowance.
+- **Interest-Based Recommendations:** Supports travel interests such as sightseeing, food, beaches, adventure, and nature.
+- **Trip Management:** Allows users to save and revisit their planned trips.
+- **AI Travel Assistant:** Planned integration for conversational travel guidance and personalized recommendations.
+- **Flexible Trip Planning:** Designed to accommodate different destinations, trip durations, and budgets.
+
+## 🌟 What Makes TripWise AI Different?
+
+Traditional travel platforms often focus on individual services such as booking transport, finding accommodation, or discovering attractions.
+
+TripWise AI focuses on bringing itinerary planning, budget awareness, and trip organization together in one convenient experience.
+
+Its goal is to make travel planning more personalized, organized, and accessible while providing a foundation for future AI-powered recommendations.
+
+## 👥 Target Users
+
+- Solo travellers and backpackers.
+- Families planning holidays.
+- Students and budget-conscious travellers.
+- Groups organizing trips together.
+- Travel agencies seeking planning tools.
+
+## 💼 Business Potential
+
+TripWise AI could evolve into a travel-planning product offering premium planning features, personalized recommendations, and integrations with travel service providers.
+
+Potential opportunities include premium subscriptions, travel affiliate partnerships, and business-to-business travel-planning solutions. These opportunities would require further market research and customer validation.
+
+## 🛠️ Proposed Technology Stack
 
 | Component | Technology |
 |---|---|
 | Frontend | React.js, HTML, CSS, JavaScript |
 | Backend | Python, FastAPI |
 | Database | SQLite |
-| API | REST APIs |
-| AI Integration | LLM API integration — planned enhancement |
-| Development Tools | VS Code, Git, GitHub |
-| API Testing | FastAPI Swagger UI, Postman |
+| API Architecture | REST APIs |
+| AI Integration | LLM API — planned enhancement |
+| Version Control | Git and GitHub |
 
-## 🏗️ System Architecture
+## 🧪 Example Scenario
 
-```text
-                 User
-                  |
-                  v
-          React.js Frontend
-                  |
-                  v
-           FastAPI Backend
-                  |
-          +-------+-------+
-          |               |
-          v               v
-   Trip Generation    SQLite Database
-   and Budget Logic   Saved Trip Details
-          |
-          v
-    Personalized
-    Sample Itinerary
-```
+A traveller wants to visit Goa for three days with a budget of ₹10,000 and an interest in beaches, local food, and sightseeing.
 
-## 📂 Project Structure
+TripWise AI uses these preferences to generate a sample day-by-day itinerary and display the budget overview. The traveller can review the plan and save it for future reference.
 
-```text
-TripWise-AI/
-├── backend/
-│   ├── main.py
-│   ├── requirements.txt
-│   └── .env.example
-├── frontend/
-│   ├── index.html
-│   ├── package.json
-│   └── src/
-│       ├── App.jsx
-│       ├── main.jsx
-│       └── styles.css
-├── .gitignore
-└── README.md
-```
+*The current MVP uses template-based activities and does not provide verified live prices, booking availability, or LLM-generated recommendations.*
 
-## ⚙️ Installation and Setup
+## 📍 Current Status
 
-### Prerequisites
+**Stage:** Working MVP with planned AI enhancements.
 
-Install the following before running the project:
+The current implementation includes a travel-planning interface, template-based itinerary generation, budget overview, and trip storage. LLM integration, live travel data, and booking functionality are future enhancements.
 
-- Python 3.10 or later
-- Node.js and npm
-- Git
+## 🔮 Vision
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/YOUR-USERNAME/TripWise-AI.git
-cd TripWise-AI
-```
-
-Replace `YOUR-USERNAME` with your GitHub username.
-
-### 2. Set Up the Backend
-
-Open a terminal in the project root and run:
-
-```bash
-cd backend
-py -m venv .venv
-```
-
-Activate the virtual environment on Windows:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Start the FastAPI server:
-
-```bash
-uvicorn main:app --reload
-```
-
-The backend will run at:
-
-`http://127.0.0.1:8000`
-
-Interactive API documentation:
-
-`http://127.0.0.1:8000/docs`
-
-### 3. Set Up the Frontend
-
-Open a second terminal in the project root:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open the local URL displayed in the terminal, usually:
-
-`http://127.0.0.1:5173`
-
-Keep both terminals running while using the application.
-
-## 🔌 API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/` | API welcome message |
-| GET | `/health` | Check backend status |
-| POST | `/api/trips/generate` | Generate a sample itinerary |
-| POST | `/api/trips` | Save a trip |
-| GET | `/api/trips` | Retrieve saved trips |
-| GET | `/api/trips/{trip_id}` | Retrieve a specific trip |
-
-### Example Request
-
-Send a POST request to `/api/trips/generate`:
-
-```json
-{
-  "destination": "Goa",
-  "days": 3,
-  "budget": 10000,
-  "interests": [
-    "beaches",
-    "food",
-    "sightseeing"
-  ]
-}
-```
-
-The API returns a structured itinerary containing activities for each day and the requested budget information.
-
-## 🗄️ Database
-
-SQLite is used to store saved trip details, including:
-
-- Destination
-- Trip duration
-- Budget
-- Travel interests
-- Generated itinerary
-- Estimated cost
-- Creation timestamp
-
-The database is created automatically when the backend starts.
-
-## 🧠 AI Integration
-
-The platform is designed to support LLM-based itinerary generation and conversational travel assistance.
-
-The current MVP uses a template-based itinerary generator. A real LLM API and live travel data integrations are future enhancements, not features of the current implementation.
-
-## 🔮 Future Enhancements
-
-- Integrate an LLM API for contextual itinerary generation.
-- Add live flight and hotel search through supported travel APIs.
-- Integrate maps and location-based recommendations.
-- Add user authentication and personalized profiles.
-- Introduce collaborative trip planning.
-- Add detailed expense tracking and budget alerts.
-- Support itinerary export to PDF.
-- Deploy the frontend and backend to cloud hosting.
-
-## 💼 Business Value
-
-TripWise AI aims to reduce the effort involved in organizing travel by combining itinerary planning, budget estimation, and trip management in a single interface.
-
-Potential users include solo travelers, families, students, and groups looking for an organized way to plan trips.
-
-## 👩‍💻 Learning Outcomes
-
-This project demonstrates practical experience with:
-
-- Full-stack application architecture
-- Python backend development
-- REST API design and integration
-- React-based user interfaces
-- Relational data persistence
-- Input validation and error handling
-- Git and GitHub version control
-- Planning future AI and external API integrations
-
-## 👤 Author
-**Laxmi Gadavi**
-**AI & Data Science Engineering Graduate**
-
+To create an intelligent travel companion that helps people plan better trips through personalized recommendations, budget-aware planning, and seamless journey organization.
 
 ---
 
-*TripWise AI — Plan smarter. Travel better.*
+**TripWise AI — Your journey, thoughtfully planned.**
